@@ -149,6 +149,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       LinkedIn: String
       Twitter: String
       Youtube: String
+      Github: String
+      Codepen: String
     }
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
