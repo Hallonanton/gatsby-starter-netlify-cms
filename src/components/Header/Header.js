@@ -11,6 +11,8 @@ import Twitter from '../../img/social/twitter.svg'
 import Instagram from '../../img/social/instagram.svg'
 import LinkedIn from '../../img/social/linkedin.svg'
 import Youtube from '../../img/social/youtube.svg'
+import Codepen from '../../img/social/codepen.svg'
+import Github from '../../img/social/github.svg'
 
 /*==============================================================================
   # Styles
@@ -98,7 +100,9 @@ class Navbar extends Component {
       Instagram,
       LinkedIn,
       Twitter,
-      Youtube
+      Youtube,
+      Codepen,
+      Github
     }
     return icons[name]
   }
