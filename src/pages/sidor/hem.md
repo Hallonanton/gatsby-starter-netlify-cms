@@ -1,6 +1,6 @@
 ---
 templateKey: SinglePage
-title: Rubrik
+title: Hem
 sections:
   - sectionKey: SectionText
     textBody: >-
