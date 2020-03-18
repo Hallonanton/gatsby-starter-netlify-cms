@@ -1,6 +1,6 @@
 ---
 templateKey: SinglePage
-title: Integrotetspolicy
+title: Integritetspolicy
 sections:
   - sectionKey: SectionText
     textBody: >-
