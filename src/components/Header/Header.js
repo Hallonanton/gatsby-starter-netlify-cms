@@ -9,8 +9,8 @@ import DesktopNav from './Desktop/DesktopNav'
 import Facebook from '../../img/social/facebook.svg'
 import Twitter from '../../img/social/twitter.svg'
 import Instagram from '../../img/social/instagram.svg'
-import LinkedIn from '../../img/social/instagram.svg'
-import Youtube from '../../img/social/instagram.svg'
+import LinkedIn from '../../img/social/linkedin.svg'
+import Youtube from '../../img/social/youtube.svg'
 
 /*==============================================================================
   # Styles
