@@ -1,22 +1,20 @@
 import React from 'react'
-//import styled from '@emotion/styled'
-//import ScrollbarWrapper from './ScrollbarWrapper';
+import styled from '@emotion/styled'
+import ScrollbarWrapper from './ScrollbarWrapper';
 import SiteMetadata from './SiteMetadata'
 import Theme from './Theme'
-//import Footer from '../Footer/Footer'
-//import Header from '../Header/Header'
-//import CookieConsent from './CookieConsent'
-
-import WaveTest from '../WaveTest/WaveTest'
+import Footer from '../Footer/Footer'
+import Header from '../Header/Header'
+import CookieConsent from './CookieConsent'
 
 
 /*==============================================================================
   # Styles
 ==============================================================================*/
 
-/*const Main = styled('main')`
+const Main = styled('main')`
   
-`*/
+`
 
 
 /*==============================================================================
@@ -24,13 +22,6 @@ import WaveTest from '../WaveTest/WaveTest'
 ==============================================================================*/
 
 const TemplateWrapper = ({children}) => (
-  <Theme>
-    <SiteMetadata />
-    <WaveTest />
-  </Theme>
-)
-
-/*const TemplateWrapper = ({children}) => (
   <Theme>
     <SiteMetadata />
     <ScrollbarWrapper>
@@ -42,7 +33,7 @@ const TemplateWrapper = ({children}) => (
       <CookieConsent />
     </ScrollbarWrapper>
   </Theme>
-)*/
+)
 
 
 export default TemplateWrapper

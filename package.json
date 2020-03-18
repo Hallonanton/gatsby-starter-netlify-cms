@@ -41,8 +41,6 @@
     "react-helmet": "^5.2.0",
     "react-media-universal": "^2.0.2",
     "reset-css": "^4.0.1",
-    "three": "^0.111.0",
-    "three-full": "^17.1.0",
     "uuid": "^3.2.1"
   },
   "keywords": [
