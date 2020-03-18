@@ -90,6 +90,8 @@ export const Header = graphql`
             Twitter
             LinkedIn
             Youtube
+            Codepen
+            Github
           }
         }
       }

@@ -29,6 +29,8 @@ collections:
               - {label: "LinkedIn", name: "LinkedIn", widget: "string", required: false}
               - {label: "Twitter", name: "Twitter", widget: "string", required: false}
               - {label: "Youtube", name: "Youtube", widget: "string", required: false}
+              - {label: "Codepen", name: "Codepen", widget: "string", required: false}
+              - {label: "Github", name: "Github", widget: "string", required: false}
       - name: "header-settings"
         label: "Header"
         file: "src/data/header.json"
