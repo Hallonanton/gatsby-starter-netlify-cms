@@ -5,6 +5,25 @@ const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
 
 /*==============================================================================
+  # Slugify
+==============================================================================*/
+
+function slugify(string) {
+  const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
+  const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
+  const p = new RegExp(a.split('').join('|'), 'g')
+
+  return string.toString().toLowerCase()
+    .replace(/\s+/g, '-') // Replace spaces with -
+    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+    .replace(/&/g, '-och-') // Replace & with 'och'
+    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+    .replace(/^-+/, '') // Trim - from start of text
+    .replace(/-+$/, '') // Trim - from end of text
+}
+
+/*==============================================================================
   # Create pages
 ==============================================================================*/
 
@@ -50,8 +69,8 @@ exports.createPages = ({ actions, graphql }) => {
      */
 
     const { allDataJson, allMarkdownRemark } = result.data
-    const homepage = allDataJson.edges[0].node.homepage
     const posts = allMarkdownRemark.edges
+    let homepage = _.get(allDataJson, 'edges[0].node.homepage')
     let allCategories = []
 
     /*
@@ -62,16 +81,17 @@ exports.createPages = ({ actions, graphql }) => {
 
       const { id } = edge.node
       let { slug } = edge.node.fields
+      let categories = _.get(edge, 'node.frontmatter.categories')
 
       // Save categories for later use
-      if (_.get(edge, 'node.frontmatter.categories')) {
-        allCategories = allCategories.concat(edge.node.frontmatter.categories)
+      if ( categories ) {
+        allCategories = allCategories.concat(categories)
       }
 
       // Exclude settings pages from page creation
       if ( !slug.includes('settings') ) {    
 
-        let { categories, templateKey } = edge.node.frontmatter
+        let { templateKey } = edge.node.frontmatter
 
         // If template is page, remove "sidor" directory from path
         if ( templateKey === 'SinglePage' ) {
@@ -79,7 +99,7 @@ exports.createPages = ({ actions, graphql }) => {
           slug = slug.replace("/sidor", "")
 
           //Set homepage
-          if ( slug === '/'+homepage+'/' ) {
+          if ( homepage && slug === `/${slugify(homepage)}/` ) {
             slug = "/"
           }
         }

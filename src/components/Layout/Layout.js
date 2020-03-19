@@ -5,7 +5,7 @@ import SiteMetadata from './SiteMetadata'
 import Theme from './Theme'
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
-import CookieConsent from './CookieConsent'
+//import CookieConsent from './CookieConsent'
 
 
 /*==============================================================================
@@ -30,7 +30,7 @@ const TemplateWrapper = ({children}) => (
         {children}
       </Main>
       <Footer />
-      <CookieConsent />
+      {/*<CookieConsent />*/}
     </ScrollbarWrapper>
   </Theme>
 )

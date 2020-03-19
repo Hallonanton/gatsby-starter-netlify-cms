@@ -17,8 +17,8 @@ collections:
         file: "src/data/settings.json"
         description: "General site settings"
         fields:
-          - {label: "Startsida", name: "homepage", widget: "relation", collection: "sidor", searchFields: "title", valueField: "slug", displayFields: "title"}
-          - {label: "Sida för integritetspolicy", name: "integritypage", widget: "relation", collection: "sidor", searchFields: "title", valueField: "slug", displayFields: "title"}
+          - {label: "Startsida", name: "homepage", widget: "relation", collection: "sidor", searchFields: "title", valueField: "title", displayFields: "title"}
+          - {label: "Sida för integritetspolicy", name: "integritypage", widget: "relation", collection: "sidor", searchFields: "title", valueField: "title", displayFields: "title"}
           - label: "Sociala medier"
             name: "socialmedia"
             widget: "object"
