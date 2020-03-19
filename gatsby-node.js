@@ -99,7 +99,7 @@ exports.createPages = ({ actions, graphql }) => {
           slug = slug.replace("/sidor", "")
 
           //Set homepage
-          if ( homepage && slug === `/${slugify(homepage)}/` ) {
+          if ( homepage && slug === "/hem/" || slug === `/${slugify(homepage)}/` ) {
             slug = "/"
           }
         }
